@@ -1,0 +1,1 @@
+# Dell-G3-3590-Manjaro
