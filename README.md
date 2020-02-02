@@ -32,3 +32,9 @@ Grub config at `/etc/default/grub`
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="quiet apparmor=1 security=apparmor udev.log_priority=3 acpi_osi=Linux acpi_osi='Windows 2015' acpi_enforce_resources=lax"
 ```
+### Android emulator sound problem
+In /etc/pulse/default.pa change load-module module-udev-detect to load-module module-udev-detect tsched=0
+
+and in /etc/pulse/daemon.conf change ; default-sample-rate = 44100 to default-sample-rate = 48000
+
+Finally restart pulseaudio with pulseaudio -k
