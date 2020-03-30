@@ -32,6 +32,8 @@ Grub config at `/etc/default/grub`
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="quiet apparmor=1 security=apparmor udev.log_priority=3 acpi_osi=Linux acpi_osi='Windows 2015' acpi_enforce_resources=lax"
 ```
+NVIDIA High Definition Audio Controller with ALSA worked after writting `options snd_hda_intel dmic_detect=0` into `/etc/modprobe.d/hda_fix.conf` and `options snd_hda_intel model=laptop-dmic` into `/etc/modprobe.d/alsa-base.conf`
+
 ### Android emulator sound problem
 In /etc/pulse/default.pa change load-module module-udev-detect to load-module module-udev-detect tsched=0
 
